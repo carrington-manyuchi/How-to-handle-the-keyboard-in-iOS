@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo6" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-K7-JWs">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Mobile Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypT-yq-rhu">
                                 <rect key="frame" x="20" y="94" width="374" height="60"/>
                                 <constraints>
@@ -25,35 +28,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+27" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-uu-8VU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+27 - 00 - 000 - 0001" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-uu-8VU">
                                 <rect key="frame" x="50" y="334" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eer-7o-I0E"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpb-iO-RsU">
+                                <rect key="frame" x="137" y="752" width="140" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Y6N-yj-7se"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="e3J-6x-mdL"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mpb-iO-RsU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9PP-Yl-Jdz"/>
+                            <constraint firstAttribute="trailing" secondItem="Muy-K7-JWs" secondAttribute="trailing" constant="-10" id="DUr-sf-xd1"/>
                             <constraint firstItem="ypT-yq-rhu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Exf-21-u5a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ypT-yq-rhu" secondAttribute="trailing" constant="20" id="LGI-vY-aWv"/>
                             <constraint firstItem="wVe-uu-8VU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MeY-lN-kdy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mpb-iO-RsU" secondAttribute="bottom" constant="50" id="VeJ-dd-4dv"/>
+                            <constraint firstAttribute="bottom" secondItem="Muy-K7-JWs" secondAttribute="bottom" id="Wz7-lM-ViX"/>
                             <constraint firstItem="ypT-yq-rhu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gZ8-if-Kbu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wVe-uu-8VU" secondAttribute="trailing" constant="50" id="hnx-8d-OJE"/>
+                            <constraint firstItem="Muy-K7-JWs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nNF-g0-WMJ"/>
                             <constraint firstItem="wVe-uu-8VU" firstAttribute="top" secondItem="ypT-yq-rhu" secondAttribute="bottom" constant="180" id="nnu-Rc-IUP"/>
+                            <constraint firstItem="Muy-K7-JWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tgC-DM-WdB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="VeJ-dd-4dv" id="w7h-DO-X7i"/>
+                        <outlet property="buttonTapped" destination="mpb-iO-RsU" id="z8c-Ar-1hH"/>
+                        <outlet property="txtField" destination="wVe-uu-8VU" id="4Ve-fB-fDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="89"/>
+            <point key="canvasLocation" x="60.869565217391312" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="photo6" width="153" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
